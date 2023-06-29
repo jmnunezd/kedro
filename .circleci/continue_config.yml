@@ -244,14 +244,18 @@ jobs:
       - setup
       - unless:
           condition:
-            equal: ["3.10", <<parameters.python_version>>]
+            or:
+              - equal: [ "3.10", <<parameters.python_version>> ]
+              - equal: [ "3.11", <<parameters.python_version>> ]
           steps:
             - run:
                 name: Run unit tests in parallel
                 command: PYTEST_ADDOPTS="-v" make test
       - when:
           condition:
-            equal: [ "3.10", <<parameters.python_version>> ]
+            or:
+              - equal: [ "3.10", <<parameters.python_version>> ]
+              - equal: [ "3.11", <<parameters.python_version>> ]
           steps:
             - run:
                 name: Run unit tests sequentially
