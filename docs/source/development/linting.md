@@ -43,7 +43,7 @@ pip install isort
 ```
 #### Configure `flake8`
 
-Store your `flake8` configuration in a file named `setup.cfg` within your project root. The Kedro starters use the [following configuration](https://github.com/kedro-org/kedro-starters/blob/main/pandas-iris/%7B%7B%20cookiecutter.repo_name%20%7D%7D/setup.cfg):
+Store your `flake8` configuration in a file named `.flake8` within your project root. The Kedro starters use the [following configuration](https://github.com/kedro-org/kedro-starters/blob/main/pandas-iris/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.flake8):
 
 ```text
 [flake8]
